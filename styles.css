@@ -1,0 +1,68 @@
+/* styles.css */
+body,
+html {
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: black;
+    cursor: pointer;
+}
+
+.winning-message {
+    display: none;
+    position: absolute;
+    top: 20%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.winning-message button {
+    cursor: pointer;
+    background-color: #88cc88;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+.winning-message.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cell.x::before {
+    content: 'X';
+    /* Display an X */
+    color: red;
+}
+
+.cell.circle::before {
+    content: 'O';
+    /* Display an O */
+    color: blue;
+}
